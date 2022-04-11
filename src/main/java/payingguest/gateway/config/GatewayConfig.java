@@ -49,6 +49,10 @@ public class GatewayConfig {
                 .route("GuestModule",
                         pPredicateSpec -> pPredicateSpec.path("/guest/**")
                                 .filters(pFilterSpec -> pFilterSpec.filter(filter)).uri("lb://guest-service"))
+                // Map Room Service
+                .route("RoomModule",
+                        pPredicateSpec -> pPredicateSpec.path("/room/**")
+                                .filters(pFilterSpec -> pFilterSpec.filter(filter)).uri("lb://room-service"))
                 .build();
     }
 }
