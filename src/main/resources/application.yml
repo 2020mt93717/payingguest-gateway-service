@@ -1,0 +1,23 @@
+#Server Settings
+server:
+  port: 8080
+
+#secret key
+jwt:
+  secret: secretkey
+
+#Eureka Service Discovery Settings
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      preferIpAddress: true
+
+spring:
+  # Application Name
+  application:
+    name: gateway-service
+  #ignore null fields in json
+  jackson:
+    default-property-inclusion: NON_NULL
