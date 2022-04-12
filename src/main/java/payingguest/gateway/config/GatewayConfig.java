@@ -53,6 +53,14 @@ public class GatewayConfig {
                 .route("RoomModule",
                         pPredicateSpec -> pPredicateSpec.path("/room/**")
                                 .filters(pFilterSpec -> pFilterSpec.filter(filter)).uri("lb://room-service"))
+                // Map Payment Service
+                .route("PaymentModule",
+                        pPredicateSpec -> pPredicateSpec.path("/payment/**")
+                                .filters(pFilterSpec -> pFilterSpec.filter(filter)).uri("lb://payment-service"))
+                // Map Payment Service
+                .route("BillModule",
+                        pPredicateSpec -> pPredicateSpec.path("/bill/**")
+                                .filters(pFilterSpec -> pFilterSpec.filter(filter)).uri("lb://bill-service"))
                 .build();
     }
 }

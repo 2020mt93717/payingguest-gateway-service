@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>payingguest</groupId>
-    <artifactId>gateway-service</artifactId>
+    <artifactId>payingguest-gateway-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gateway</name>
     <description>API Gateway for Paying Guest Application</description>
